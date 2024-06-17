@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { Typewriter } from 'react-simple-typewriter'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    {/* main */}
+    <section className='relative w-full h-full'>
+      <img className='absolute w-full' src='images/main.jpg' />
+      {/* <h1 className='absolute top-0 left-0 w-full mt-10'>우리 결혼 합니다!</h1> */}
+      <h1 className='absolute w-full mt-12 text-white drop-shadow-lg'>
+        <Typewriter
+            words={['우리, 결혼합니다!']}
+            cursor = {false}
+          />
+      </h1>
+      <div className='main_info absolute left-0 bottom-36 w-full text-white drop-shadow-lg text-2xl'>
+        박새미 & 이태현
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </section>
+    
+    {/* info */}
+    <section>
+
+    </section>
     </>
   )
 }

@@ -1,11 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("./fonts/GowunBatang-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GowunBatang-Bold";
+  src: url("./fonts/GowunBatang-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HighSummit";
+  font-weight: normal;
+  src: url("./fonts/HighSummit.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MapoFlowerIsland";
+  font-weight: normal;
+  src: url("./fonts/MapoFlowerIsland.ttf") format("truetype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "GowunBatang-Regular", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #000;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +39,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000;
   text-decoration: inherit;
 }
 a:hover {
@@ -26,8 +50,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 h1 {
@@ -35,6 +59,7 @@ h1 {
   line-height: 1.1;
 }
 
+/* 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -65,4 +90,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
