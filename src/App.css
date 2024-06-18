@@ -1,6 +1,18 @@
 #root {
-  width: 800px;
-  height: 1200px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
+}
+
+.subtitle{
+  letter-spacing: 0.2em;
+}
+
+.sec_text{
+  background-color: #FFF2F2;
+}
+
+.image-gallery{
+  width: 100%;
 }
