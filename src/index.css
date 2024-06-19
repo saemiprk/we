@@ -1,4 +1,5 @@
 @import "react-image-gallery/styles/css/image-gallery.css";
+@import 'react-calendar/dist/Calendar.css';
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +24,14 @@
   font-weight: normal;
   src: url("./fonts/MapoFlowerIsland.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Abel";
+  font-weight: normal;
+  src: url("./fonts/Abel.ttf") format("truetype");
+}
+.Abel{
+  font-family: "Abel";
+}
 .GowunBatang-Bold{
   font-family: 'GowunBatang-Bold';
 }
@@ -40,6 +49,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
 }
 
 a {
@@ -60,8 +70,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  /* min-width: 320px;
-  min-height: 100vh; */
 }
 
 h1 {

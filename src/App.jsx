@@ -1,16 +1,15 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Typewriter } from 'react-simple-typewriter';
 import ImageSlider from './components/ImageSlider'
+import CountDown from './components/CountDown';
+import DecCalendar from './components/DecCalendar';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
     <section className='relative w-full'>
       <img className='w-full' src='images/main02.jpg' />
-      {/* <h1 className='absolute top-0 left-0 w-full mt-10'>우리 결혼 합니다!</h1> */}
       <h1 className='absolute w-full mt-10 top-0 left-0 drop-shadow-lg'>
         <Typewriter
             words={['우리, 결혼합니다!']}
@@ -24,7 +23,7 @@ function App() {
       </div>
     </section>
 
-    <section className='sec_text relative w-full p-10'>
+    <section className='bg-red-100 relative w-full p-10'>
       <div className='text-lg leading-7'>
         <span>추운 겨울의 끝자락에서<br/>저희 두 사람이<br/>평생을 약속하게 되었습니다.<br/>귀한 걸음 하셔서 저희의 앞날을<br/>축복해 주시면 감사하겠습니다.</span>
       </div>
@@ -46,6 +45,13 @@ function App() {
       </div>
       <div className='flex items-center justify-center'>
         <ImageSlider className='w-full' />
+      </div>
+    </section>
+
+    <section className='bg-red-100 p-10'>
+      <div>
+        <DecCalendar />
+        <CountDown />
       </div>
     </section>
 
