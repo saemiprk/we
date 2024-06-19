@@ -13,6 +13,7 @@ const DecCalendar = () => {
                     onChange= {setDate}
                     value= {date}
                     showNavigation = {false}
+                    showNeighboringMonth = {false}
                     formatDay={(locale, date) => date.toLocaleString("en", {day: "numeric"})}
                 />
              </div>
