@@ -1,28 +1,24 @@
-import React, { useRef, useEffect } from 'react'
+import React  from 'react'
+import { Container as MapDiv, NaverMap, Marker, useNavermaps } from 'react-naver-maps'
 
 const LocationMap = () => {
 
-    const mapRef = useRef(null);
-    const lat = 37.5171174
-    const lng = 126.8994966
-    
-    useEffect(() => {
-      const { naver } = window;
-      if (mapRef.current && naver) {
-        const location = new naver.maps.LatLng(lat, lng);
-        const map = new naver.maps.Map(mapRef.current, {
-          center: location,
-          zoom: 17, // 지도 확대 정도
-        });
-        new naver.maps.Marker({
-          position: location,
-          map,
-        });
-      }
-    }, []);
+    const navermaps = useNavermaps();
     
     return (
-       <div ref={mapRef} style={{ width: "100%", height: "300px" }}></div>
+        <MapDiv
+            style={{
+            width: '100%',
+            height: '400px',
+          }}
+        >
+            <NaverMap
+                defaultCenter={new navermaps.LatLng(37.3595704, 127.105399)}
+                defaultZoom={15}
+            >
+                <Marker position={new navermaps.LatLng(37.3595704, 127.105399)} />
+            </NaverMap>
+        </MapDiv>
     );
 }
 
