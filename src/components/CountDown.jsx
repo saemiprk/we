@@ -32,7 +32,7 @@ const CountDown = () => {
                             <span className='flex mt-6'>{seconds}</span>
                         </div>
                     </div>
-                    <div className='text-sm mt-2'>태현, 새미 결혼식이 {days}일 남았습니다.</div>
+                    <div className='flex justify-center items-center text-sm mt-2'>태현, 새미 결혼식이 <span className='GowunBatang-Bold text-red-400 text-lg pl-1 pr-1'>{days}</span>일 남았습니다.</div>
                 </div>
                 )}
             />
