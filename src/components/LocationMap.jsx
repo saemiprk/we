@@ -13,10 +13,10 @@ const LocationMap = () => {
           }}
         >
             <NaverMap
-                defaultCenter={new navermaps.LatLng(37.517767, 126.899511)}
+                defaultCenter={new navermaps.LatLng(37.517436, 126.8997884)}
                 defaultZoom={15}
             >
-                <Marker position={new navermaps.LatLng(37.517767, 126.899511)} />
+                <Marker position={new navermaps.LatLng(37.517436, 126.8997884)} />
             </NaverMap>
         </MapDiv>
     );
