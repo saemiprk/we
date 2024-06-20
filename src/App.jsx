@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import ImageSlider from './components/ImageSlider'
 import CountDown from './components/CountDown';
 import DecCalendar from './components/DecCalendar';
-import LocationMap from './components/LocationMap';
+// import LocationMap from './components/LocationMap';
 
 function App() {
   return (
@@ -67,7 +67,7 @@ function App() {
           <div>JK아트컨벤션 4F, 엠버루체홀</div>
           <div className='text-sm'>서울 영등포구 문래로 164 (문래동3가 55-16번지) <button className='border-1 bg-red-100 p-1 rounded-sm'>주소복사</button></div>
         </div>
-        <LocationMap />
+        {/* <LocationMap /> */}
       </div>
     </section>
 
