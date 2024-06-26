@@ -6,7 +6,7 @@ const CountDown = () => {
     const ourDate = new Date('2024-12-14');
 
     return (
-        <div>
+        <div className='mt-3'>
             <Countdown
                 targetDate={ourDate}
                 renderer={({ days, hours, minutes, seconds }) => (

@@ -5,6 +5,8 @@ import ImageSlider from './components/ImageSlider'
 import CountDown from './components/CountDown';
 import DecCalendar from './components/DecCalendar';
 import CopyClipboard from './components/CopyClipboard';
+// import Button from './components/Button';
+import ModalButton from './components/ModalButton';
 import { IoMdSubway } from "react-icons/io";
 import { IoMdBus } from "react-icons/io";
 import { IoMdCar } from "react-icons/io";
@@ -45,6 +47,10 @@ function App() {
           <span className='flex items-center justify-center text-lg'>박광도 · 권영일 <span className='m-2 text-sm'>장녀</span>박새미</span>
         </div>
       </div>
+      <div className='flex items-center justify-center mt-5'>
+        {/* <button className='flex items-center justify-center bg-white text-red-400 rounded pt-1.5 pb-1.5 pl-4 pr-4'><BsFillTelephoneFill className='pr-1' /> 연락하기</button> */}
+        <ModalButton title={'연락하기'} />
+      </div>
     </section>
 
     {/* Gallery */}
@@ -74,7 +80,7 @@ function App() {
       <div>
         <div className='mb-3'>
           <div>JK아트컨벤션 4F, 엠버루체홀</div>
-          <div className='text-sm'>서울 영등포구 문래로 164 <CopyClipboard value={'서울 영등포구 문래로 164'} /></div>
+          <div className='mt-1.5 text-sm'>서울 영등포구 문래로 164 <CopyClipboard value={'서울 영등포구 문래로 164'} /></div>
         </div>
         {/* <LocationMap /> */}
         <div className='p-3 pb-0'>
