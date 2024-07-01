@@ -49,7 +49,7 @@ function App() {
       </div>
       <div className='flex items-center justify-center mt-5'>
         {/* <button className='flex items-center justify-center bg-white text-red-400 rounded pt-1.5 pb-1.5 pl-4 pr-4'><BsFillTelephoneFill className='pr-1' /> 연락하기</button> */}
-        <ModalButton title={'연락하기'} />
+        <ModalButton title={'contact'} />
       </div>
     </section>
 

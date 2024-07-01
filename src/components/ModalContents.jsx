@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
 const ModalContents = ({ title }) => {
-    if(title === '연락하기'){
+    if(title === 'contact'){
         return (
           <div>
               <div className='text-gray-400'>
@@ -17,7 +17,7 @@ const ModalContents = ({ title }) => {
                   <div className='flex items-center justify-between mt-3'>
                   <div className='text-sm w-[25%]'>신랑</div>
                   <div className='text-lg'>이태현</div>
-                  <div className='flex items-center justify-center'><button className='mr-5'><BsFillTelephoneFill className='text-l' /></button><button><MdEmail className='text-xl' /></button></div>
+                  <div className='flex items-center justify-center'><button className='mr-5' onClick={tel}><BsFillTelephoneFill className='text-l' /></button><button><MdEmail className='text-xl' /></button></div>
                   </div>
                   <div className='flex items-center justify-between mt-3'>
                   <div className='text-sm w-[25%]'>신랑 아버지</div>

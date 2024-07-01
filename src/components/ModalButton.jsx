@@ -12,7 +12,7 @@ const ModalButton = ( { title } ) => {
         top: '0',
         left: '0',
         border: '0',
-        background: 'rgba(0,0,0,.7)',
+        background: 'rgba(0,0,0,0.75)',
       },
     };
 
