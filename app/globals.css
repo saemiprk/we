@@ -1,0 +1,67 @@
+@import 'react-calendar/dist/Calendar.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "GowunBatang";
+    font-weight: normal;
+    src: url("/fonts/GowunBatang-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "GowunBatang";
+    font-weight: bold;
+    src: url("/fonts/GowunBatang-Bold.ttf") format("truetype");
+}
+
+body * {
+    font-family: "GowunBatang";
+    font-weight: normal;
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+} 
+.swiper-wrapper{
+    align-items: center;
+}
+
+/* Calendar */
+.react-calendar__tile:enabled:focus{
+    background-color: transparent;
+}
+.react-calendar__tile--active{
+  background-color: #f590b6 !important;
+  border-radius: 0.5em;
+}
+.react-calendar__month-view__weekdays__weekday abbr{
+  text-decoration-line: none;
+}
+
+/* Account */
+#groom, #bride {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+#groom.active, #bride.active{
+    height: 250px;
+}
+
+.accountButton > svg {
+    transform: rotate(0deg);
+    transition: all .3s ease;
+}
+.accountButton > svg.active {
+    transform: rotate(180deg);
+    transition: all .3s ease;
+}
+
+  
