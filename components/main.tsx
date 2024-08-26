@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import mainImage from '../public/images/main.jpg';
-import { Typewriter } from 'react-simple-typewriter';
 
 export default function Main(){
     return (
@@ -20,10 +19,7 @@ export default function Main(){
                 priority
             />
             <div className='absolute top-0 left-0 right-0 text-center text-4xl mt-10'>
-                <Typewriter
-                    words={['우리, 결혼합니다!']}
-                    cursor = {false}
-                />
+                <h1>우리, 결혼합니다!</h1>
             </div>
             <div className='absolute bottom-0 left-0 right-0 mb-6 w-full text-center text-white text-lg'>
                 <div className='mb-1'>이태현 & 박새미</div>
