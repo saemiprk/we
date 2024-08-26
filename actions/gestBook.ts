@@ -15,15 +15,25 @@ function handleError(error){
 }
 
 // Get
-export async function getGestBook(endIndex: number){
+export async function getGestBook({startIndex, endIndex}){
     const supabase = await createServerSupabaseClient();
 
     const { data, error } = await supabase.from('gestbook')
-    .select('*').range(0, endIndex);
+    .select('*').range(startIndex, endIndex)
+    .order('created_at', { ascending: true });
+
+    const allData = await supabase.from('gestbook').select('*');
+    let totalPage = 1;
+    if(allData.data && allData.data.length <= 50){
+        totalPage = Math.ceil(allData.data.length / 5);
+    }
 
     handleError(error);
 
-    return data;
+    return {
+        data,
+        totalPage
+    };
 }
 
 // Create

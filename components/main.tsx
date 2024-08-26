@@ -17,6 +17,7 @@ export default function Main(){
                 }}
                 width={500}
                 height={300}
+                priority
             />
             <div className='absolute top-0 left-0 right-0 text-center text-4xl mt-10'>
                 <Typewriter

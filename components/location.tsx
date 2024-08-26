@@ -14,7 +14,7 @@ export default function Location(){
 
             {/* Content */}
             <div className="py-2">
-                <Image className="m-auto" src={mapImage} width={282} height={197} alt={"서울 영등포구 문래로 164, JK아트컨벤션"}/>
+                <Image className="m-auto" src={mapImage} width={282} height={197} alt={"서울 영등포구 문래로 164, JK아트컨벤션"} priority />
             </div>
             <div>
                 {/* Subway */}

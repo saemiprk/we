@@ -1,17 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import { getGestBook } from 'actions/gestBook'
 
-const fetchGestBooks = (endIndex = 4) => {
-    const data = getGestBook(endIndex);
-    
-    return data;
-}
-
-const useGestBooks = (endIndex: number) => {
+export const useGestBooks = (startIndex: number, endIndex: number) => {
   return useQuery({
-    queryKey: ['gestbooks', endIndex],
-    queryFn: () => fetchGestBooks(endIndex),
+    queryKey: ['gestbooks', startIndex, endIndex],
+    queryFn: () => getGestBook({startIndex, endIndex}),
   })
 }
-
-export { useGestBooks, fetchGestBooks }

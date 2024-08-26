@@ -1,7 +1,5 @@
 'use client';
 
-import { dehydrate, QueryClient } from "@tanstack/react-query"
-import { fetchGestBooks } from "utils/gestBooks"
 import GestBookItem from "./gestBookItem"
 import Title from "./title"
 import { useState } from "react";
@@ -23,18 +21,3 @@ export default function GestBook(){
       </div>
   )
 }
-
-export async function getStaticProps() {
-    const queryClient = new QueryClient();
-  
-    await queryClient.prefetchQuery({
-      queryKey: ['gestbooks', 4],
-      queryFn: () => fetchGestBooks(4),
-    })
-  
-    return {
-      props: {
-        dehydratedState: dehydrate(queryClient),
-      },
-    }
-  }

@@ -36,13 +36,13 @@ export default function ImageGallery(){
                 <Image src={image05} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={4} priority />
                 <Image src={image06} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={5} priority />
                 <div className='col-span-2'>
-                    <Image className='h-full w-full' src={image07} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={6} />
+                    <Image className='h-full w-full' src={image07} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={6} priority />
                 </div>
                 <div className='col-span-2'>
-                    <Image className='h-full w-full' src={image08} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={7} />
+                    <Image className='h-full w-full' src={image08} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={7} priority />
                 </div>
-                <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={8} />
-                <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={openModalHandler} data-index={9} />
+                <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={8} priority />
+                <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={openModalHandler} data-index={9} priority />
                 {isOpen ? (
                     <div className="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
                         <div className="relative top-40 mx-auto rounded-md max-w-md">

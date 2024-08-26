@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "2024년 12월 14일 오전 11시 JK아트컨벤션",
   openGraph: {
     images: {
-      url: '/images/main.jpg'
+      url: '/images/meta.jpg'
     }
   }
 };

@@ -4,7 +4,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { createGestBook, deleteGestBook } from "actions/gestBook";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { fetchGestBooks, useGestBooks } from "utils/gestBooks";
+import { useGestBooks } from "utils/gestBooks";
 
 type Props = {
     type: string;
@@ -14,14 +14,13 @@ type Props = {
         password: string;
         contents?: string;
     },
-    endIndex?: number;
     setIsOpen?: (isOpen: boolean) => void;
 }
 
 export default function Modal(props: Props){
     const { refetch } = useQuery({
-        queryKey: ['gestbooks', 4],
-        queryFn: () => fetchGestBooks(4),
+        queryKey: ['gestbooks', 0, 4],
+        queryFn: () => useGestBooks(0, 4),
     });
 
     const [userName, setUserName] = useState("");

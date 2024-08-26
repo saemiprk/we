@@ -24,31 +24,31 @@ export default function Slider({num}){
             loop={true}
         >
             <SwiperSlide>
-                <Image src={image01} alt='1' width={300} height={100} />
+                <Image src={image01} alt='1' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image02} alt='2' width={300} height={100} />
+                <Image src={image02} alt='2' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image03} alt='3' width={300} height={100} />
+                <Image src={image03} alt='3' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image04} alt='4' width={300} height={100} />
+                <Image src={image04} alt='4' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image05} alt='5' width={300} height={100} />
+                <Image src={image05} alt='5' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image06} alt='6' width={300} height={100} />
+                <Image src={image06} alt='6' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image07} alt='7' width={300} height={100} />
+                <Image src={image07} alt='7' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image08} alt='8' width={300} height={100} />
+                <Image src={image08} alt='8' width={300} height={100} priority />
             </SwiperSlide>
             <SwiperSlide>
-                <Image src={image09} alt='9' width={300} height={100} />
+                <Image src={image09} alt='9' width={300} height={100} priority />
             </SwiperSlide>
         </Swiper>
     )

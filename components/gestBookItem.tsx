@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { useGestBooks } from "utils/gestBooks";
 import Modal from "./modal";
+import Pagenation from "./pagenation";
 
 type GestBook = {
     id?: number;
@@ -14,19 +15,28 @@ type GestBook = {
 
 export default function GestBookItem(){
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [startIndex, setStartIndex] = useState(0);
     const [endIndex, setEndIndex] = useState(4);
-    const { data, isPending, isFetching } = useGestBooks(endIndex);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const start = (startIndex: number) => setStartIndex(startIndex);
+    const end = (endIndex: number) => setEndIndex(endIndex);
+    const current = (currentPage: number) => setCurrentPage(currentPage);
+
+    const { data, isPending } = useGestBooks(startIndex, endIndex);
     const [delGestBook, setDelGestBook] = useState({
         id: 0,
         name: "",
         password: "",
-    })
+    });
 
-    if (isPending) return <div>Loading</div>;
+    if (isPending) return (
+        <div className="flex items-center justify-center min-h-screen">Loading...</div>
+    );
 
     return (
         <div className="grid grid-row gap-2 py-2">
-            {data?.map((gestbook : GestBook)=> (
+            {data.data?.map((gestbook : GestBook)=> (
                 <div key={gestbook.id} className="relative bg-red-100 p-2 w-[80%] mb-2 mx-auto rounded-md shadow">
                     <div className="font-bold mb-1">{gestbook.name}</div>
                     <div>{gestbook.contents}</div>
@@ -42,18 +52,7 @@ export default function GestBookItem(){
                     }}><IoMdClose /></button>
                 </div>
             ))}
-
-            {endIndex <= data.length && (
-                <button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        setEndIndex(endIndex + 5);
-                    }}
-                    disabled={isFetching}
-                    >
-                    더보기
-                </button>
-            )}
+            <Pagenation totalPage={data.totalPage} currentPage={currentPage} start={start} end={end} current={current} />
             
             {isOpen? (
                 <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook}/>
