@@ -1,6 +1,5 @@
 import Account from "components/account";
 import DecCalendar from "components/decCalendar";
-import GestBook from "components/gestBook";
 import ImageGallery from "components/imageGallery";
 import Invition from "components/invition";
 import Location from "components/location";
@@ -15,7 +14,6 @@ export default function Home() {
       <DecCalendar />
       <Location />
       <Account />
-      <GestBook />
     </main>
   );
 }

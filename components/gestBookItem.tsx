@@ -32,7 +32,7 @@ export default function GestBookItem(){
 
     if (isPending) return (
         <div className="flex items-center justify-center min-h-screen">Loading...</div>
-    );
+    )
 
     return (
         <div className="grid grid-row gap-2 py-2">
