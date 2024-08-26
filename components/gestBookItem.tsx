@@ -31,7 +31,7 @@ export default function GestBookItem(){
     });
 
     if (isPending) return (
-        <div className="flex items-center justify-center min-h-screen">Loading...</div>
+        <div className="flex items-center justify-center">Loading...</div>
     )
 
     return (
