@@ -1,6 +1,6 @@
 'use client';
 
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { createGestBook, deleteGestBook } from "actions/gestBook";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
@@ -15,13 +15,15 @@ type Props = {
         contents?: string;
     },
     setIsOpen?: (isOpen: boolean) => void;
+    startIndex?: number;
+    endIndex?: number;
 }
 
 export default function Modal(props: Props){
-    const { refetch } = useQuery({
-        queryKey: ['gestbooks', 0, 4],
-        queryFn: () => useGestBooks(0, 4),
-    });
+    const startIndex = props.startIndex;
+    const endIndex = props.endIndex;
+    
+    const { refetch } = useGestBooks(startIndex, endIndex);
 
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");

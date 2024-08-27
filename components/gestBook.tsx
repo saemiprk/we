@@ -16,7 +16,7 @@ export default function GestBook(){
           <button type="button" onClick={() => setIsOpen(!isOpen)} className="mx-8 rounded bg-red-400 text-white shadow p-2 text-sm py-2 px-6 font-bold">작성하기</button>
         </div>
         {isOpen? (
-          <Modal type="create" setIsOpen={()=> setIsOpen(!isOpen)} />
+          <Modal type="create" setIsOpen={()=> setIsOpen(!isOpen)} startIndex={0} endIndex={4} />
         ) : null}
       </div>
   )

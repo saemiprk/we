@@ -57,7 +57,7 @@ export default function GestBookItem(){
             ) : <div className="text-center">축하글을 작성해주세요.</div>}
             
             {isOpen? (
-                <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook}/>
+                <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook} startIndex={startIndex} endIndex={endIndex} />
             ): null}
         </div>
     )
