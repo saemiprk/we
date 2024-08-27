@@ -28,7 +28,7 @@ export default function Account(){
                     계좌번호를 기재하였습니다.<br />
                     너그러운 마음으로 양해 부탁드립니다.
                 </p>
-                <div className="w-full pt-3">
+                <div className="w-full pt-5">
                     <button type="button" value={"groom"} className="accountButton flex items-center justify-center bg-white shadow text-sm py-2 rounded text-red-400 font-bold mx-auto w-[80%]" onClick={buttonAccountClick}>신랑측 계좌번호 <IoIosArrowDown className="ml-2" /></button>
                     <div id="groom" className="mx-auto w-[80%] mt-2">
                         <div className="bg-white rounded">

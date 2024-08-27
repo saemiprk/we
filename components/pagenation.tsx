@@ -17,7 +17,6 @@ export default function Pagenation({ totalPage, currentPage, current, start, end
     for(let i = 1; i <= totalPage; i++){
         pageNumbers.push(i);
     }
-
     return (
         <div className="flex mx-auto items-center justify-center">
             <div className="mx-2">

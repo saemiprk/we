@@ -52,7 +52,9 @@ export default function GestBookItem(){
                     }}><IoMdClose /></button>
                 </div>
             ))}
-            <Pagenation totalPage={data.totalPage} currentPage={currentPage} start={start} end={end} current={current} />
+            {data.data.length > 0 ? (
+                <Pagenation totalPage={data.totalPage} currentPage={currentPage} start={start} end={end} current={current} />
+            ) : <div className="text-center">축하글을 작성해주세요.</div>}
             
             {isOpen? (
                 <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook}/>
