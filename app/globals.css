@@ -63,6 +63,9 @@ body * {
 .next-button-classes{
     display: none;
 }
+.base-classes *:not(.grid-cell-button-classes[data-selected="true"] span) {
+    background-color: #fee2e2;
+}
 .grid-cell-button-classes[data-selected="true"]{
     color: #fff !important;
     background-color: #f87171 !important;
