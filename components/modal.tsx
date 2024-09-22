@@ -17,8 +17,8 @@ type Props = {
     setIsOpen?: (isOpen: boolean) => void;
     startIndex?: number;
     endIndex?: number;
-    start: (startIndex: number) => void;
-    end: (endIndex: number) => void;
+    start?: (startIndex: number) => void;
+    end?: (endIndex: number) => void;
 } 
 
 export default function Modal(props: Props){
