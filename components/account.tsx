@@ -1,9 +1,7 @@
 'use client';
 
-import { handleClientScriptLoad } from "next/script";
 import Title from "./title";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { ButtonHTMLAttributes } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Account(){
     const buttonAccountClick = (e) => {
@@ -59,14 +57,14 @@ export default function Account(){
                                 <h1 className="font-bold pb-2">이상규 <span className="mx-2 text-sm">신랑 아버지</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">우리은행 <b className="ml-2">1108884444</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="p-2">
                                 <h1 className="font-bold pb-2">정문숙 <span className="mx-2 text-sm">신랑 어머니</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">우리은행 <b className="ml-2">1104zzz444444</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                         </div>
@@ -80,21 +78,21 @@ export default function Account(){
                                 <h1 className="flex items-center font-bold pb-2">박새미 <span className="mx-2 text-sm">신부</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">신한은행 <b className="ml-2">110434755333</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="border-b p-2">
                                 <h1 className="font-bold pb-2">박광도 <span className="mx-2 text-sm">신부 아버지</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">우리은행 <b className="ml-2">1108884444</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="p-2">
                                 <h1 className="font-bold pb-2">권영일 <span className="mx-2 text-sm">신부 어머니</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">우리은행 <b className="ml-2">1104zzz444444</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                         </div>
