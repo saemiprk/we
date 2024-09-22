@@ -4,8 +4,11 @@ import Title from "./title";
 import { IoMdSubway } from "react-icons/io";
 import { IoMdBus } from "react-icons/io";
 import { IoMdCar } from "react-icons/io";
-import mapImage from "../public/images/map.png";
+import mapImage from "../public/images/naver_map.png";
+import naverImage from "../public/images/naver.png";
+import kakaoImage from "../public/images/kakao.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Location(){
     return (
@@ -14,7 +17,20 @@ export default function Location(){
 
             {/* Content */}
             <div className="py-2">
-                <Image className="m-auto" src={mapImage} width={282} height={197} alt={"서울 영등포구 문래로 164, JK아트컨벤션"} priority />
+                <div className="flex justify-center items-center flex-col pb-2">
+                    <div className="text-center leading-8">서울 영등포구 문래로 164, SK리더스뷰 4층<br /><b className="font-bold">JK아트컨벤션 엠버루체홀</b></div>
+                </div>
+                <Image className="m-auto" src={mapImage} width={640} height={197} alt={"서울 영등포구 문래로 164, JK아트컨벤션"} priority />
+                <div className="flex gap-2 items-center justify-center pt-4">
+                    <div className="flex border p-2 items-center justify-start rounded">
+                        <Link href='https://naver.me/FHYucCYu'><Image className="" src={naverImage} width={30} height={30} alt={"서울 영등포구 문래로 164, JK아트컨벤션"} /></Link>
+                        <span className="ml-2 text-sm">네이버지도</span>
+                    </div>
+                    <div className="flex border p-2 items-center justify-start rounded">
+                        <Link href='https://kko.to/x-jr9fttei'><Image className="" src={kakaoImage} width={30} height={30} alt={"서울 영등포구 문래로 164, JK아트컨벤션"} /></Link>
+                        <span className="ml-2 text-sm">카카오맵</span>
+                    </div>
+                </div>
             </div>
             <div>
                 {/* Subway */}
