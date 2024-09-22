@@ -1,7 +1,9 @@
 'use client';
 
+import { handleClientScriptLoad } from "next/script";
 import Title from "./title";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { ButtonHTMLAttributes } from "react";
 
 export default function Account(){
     const buttonAccountClick = (e) => {
@@ -18,6 +20,20 @@ export default function Account(){
         const toggleElement = document.getElementById(value);
         toggleElement.classList.toggle("active");
     }
+
+    const handleButtonClick = (e) => {
+        const account = e.target.parentElement.getElementsByTagName("b")[0].textContent;
+        handleCopyClipBoard(account);
+    }
+
+    const handleCopyClipBoard = async (text: string) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            alert("클립보드에 복사가 완료 되었습니다.");
+        } catch (e) {
+            alert("복사에 실패 하였습니다.");
+        }
+    };
 
     return (
         <div className="py-5 bg-red-100">
@@ -36,7 +52,7 @@ export default function Account(){
                                 <h1 className="flex items-center font-bold pb-2">이태현 <span className="mx-2 text-sm">신랑</span></h1>
                                 <div className="flex justify-between items-center">
                                     <span className="text-sm">우리은행 <b className="ml-2">123456789123456</b></span>
-                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm">복사하기</button>
+                                    <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="border-b p-2">

@@ -54,7 +54,7 @@ export default function GestBookItem(){
             ))}
             {data.data.length > 0 ? (
                 <Pagenation totalPage={data.totalPage} currentPage={currentPage} start={start} end={end} current={current} />
-            ) : <div className="text-center">축하글을 작성해주세요.</div>}
+            ) : <div className="text-center">아직 작성된 축하글이 없습니다. <br />축하글을 작성해주세요.</div>}
             
             {isOpen? (
                 <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook} startIndex={startIndex} endIndex={endIndex} />

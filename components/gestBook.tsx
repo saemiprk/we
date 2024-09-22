@@ -12,7 +12,7 @@ export default function GestBook(){
       <div className="py-5">
         <Title ko='방명록' en='GESTBOOK' />
         <GestBookItem />
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-center">
           <button type="button" onClick={() => setIsOpen(!isOpen)} className="mx-8 rounded bg-red-400 text-white shadow p-2 text-sm py-2 px-6 font-bold">작성하기</button>
         </div>
         {isOpen? (

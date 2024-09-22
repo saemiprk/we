@@ -44,9 +44,9 @@ export default function ImageGallery(){
                 <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={8} priority />
                 <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={openModalHandler} data-index={9} priority />
                 {isOpen ? (
-                    <div className="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
-                        <div className="relative top-40 mx-auto rounded-md max-w-md">
-                            <button type="button" className='absolute top-5 right-5 text-white text-xl z-50' onClick={() => setIsOpen(!isOpen)}><IoMdClose /></button>
+                    <div className="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-svh w-full px-4">
+                        <button type="button" className='absolute top-5 right-5 text-white text-2xl z-50' onClick={() => setIsOpen(!isOpen)}><IoMdClose /></button>
+                        <div className="relative h-svh flex items-center justify-center">
                             <Slider num={first} />
                         </div>
                     </div>

@@ -38,16 +38,16 @@ export default function InvitionModal({setIsOpen}){
                                 <span className="text-sm w-[30%]">신랑 아버지</span>
                                 <span className="font-bold">이상규</span>
                                 <div className="flex items-center text-red-400 mx-2">
-                                    <Link href='tel:'><BsFillTelephoneFill className="mr-4" /></Link>
-                                    <Link href='sms:'><BsEnvelopeFill /></Link>
+                                    <Link href='tel:01087139158'><BsFillTelephoneFill className="mr-4" /></Link>
+                                    <Link href='sms:01087139158'><BsEnvelopeFill /></Link>
                                 </div>
                             </div>
                             <div className="flex justify-between mb-2">
                                 <span className="text-sm w-[30%]">신랑 어머니</span>
                                 <span className="font-bold">정문숙</span>
                                 <div className="flex items-center text-red-400 mx-2">
-                                    <Link href='tel:'><BsFillTelephoneFill className="mr-4" /></Link>
-                                    <Link href='sms:'><BsEnvelopeFill /></Link>
+                                    <Link href='tel:01090962280'><BsFillTelephoneFill className="mr-4" /></Link>
+                                    <Link href='sms:01090962280'><BsEnvelopeFill /></Link>
                                 </div>
                             </div>
                         </div>
