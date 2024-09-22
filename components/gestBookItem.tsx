@@ -47,7 +47,7 @@ export default function GestBookItem(){
                         setDelGestBook({
                             id: gestbook.id,
                             name: gestbook.name,
-                            password: gestbook.password
+                            password: gestbook.password,
                         });
                     }}><IoMdClose /></button>
                 </div>
@@ -57,7 +57,7 @@ export default function GestBookItem(){
             ) : <div className="text-center">아직 작성된 축하글이 없습니다. <br />축하글을 작성해주세요.</div>}
             
             {isOpen? (
-                <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook} startIndex={startIndex} endIndex={endIndex} />
+                <Modal type="delete" setIsOpen={()=> setIsOpen(!isOpen)} gestbook={delGestBook} startIndex={startIndex} endIndex={endIndex} start={start} end={end} />
             ): null}
         </div>
     )

@@ -17,7 +17,9 @@ type Props = {
     setIsOpen?: (isOpen: boolean) => void;
     startIndex?: number;
     endIndex?: number;
-}
+    start: (startIndex: number) => void;
+    end: (endIndex: number) => void;
+} 
 
 export default function Modal(props: Props){
     const startIndex = props.startIndex;
@@ -53,7 +55,8 @@ export default function Modal(props: Props){
         onSuccess: () => {
             props.setIsOpen(false);
             alert("삭제가 완료 되었습니다.");
-            refetch();
+            props.start(0);
+            props.end(4);
         }
     });
 
@@ -126,7 +129,7 @@ export default function Modal(props: Props){
                         {/* Header */}
                         <div className="relative w-full py-2 font-bold text-center">
                             <h1 className="text-lg">삭제 하시려면 비밀번호를 입력하세요.</h1>
-                            <button type="button" className="absolute top-2 right-2 text-2xl text-gray-500" onClick={() => {props.setIsOpen(false)}}><IoMdClose /></button>
+                            <button type="button" className="absolute top-1 right-1 text-2xl text-gray-500" onClick={() => {props.setIsOpen(false)}}><IoMdClose /></button>
                         </div>
                         {/* Body */}
                         <div className="grid grid-col gap-2 m-2">

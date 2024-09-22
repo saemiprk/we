@@ -77,21 +77,21 @@ export default function Account(){
                             <div className="border-b p-2">
                                 <h1 className="flex items-center font-bold pb-2">박새미 <span className="mx-2 text-sm">신부</span></h1>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">신한은행 <b className="ml-2">110434755333</b></span>
+                                    <span className="text-sm">신한 <b className="ml-2">110434755333</b></span>
                                     <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="border-b p-2">
                                 <h1 className="font-bold pb-2">박광도 <span className="mx-2 text-sm">신부 아버지</span></h1>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">우리은행 <b className="ml-2">1108884444</b></span>
+                                    <span className="text-sm">새마을 <b className="ml-2">9002147185361</b></span>
                                     <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
                             <div className="p-2">
                                 <h1 className="font-bold pb-2">권영일 <span className="mx-2 text-sm">신부 어머니</span></h1>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">우리은행 <b className="ml-2">1104zzz444444</b></span>
+                                    <span className="text-sm">농협 <b className="ml-2">3521917261373</b></span>
                                     <button type="button" className="bg-red-100 p-1 shadow rounded text-sm" onClick={handleButtonClick}>복사하기</button>
                                 </div>
                             </div>
