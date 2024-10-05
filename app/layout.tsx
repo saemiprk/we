@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ReactQueryClientProvider from "config/ReactClientProivider";
 import RecoilProvider from "config/RecoilProvider";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
   return (
     <RecoilProvider>
       <ReactQueryClientProvider>
+        
         <html lang="en">
+          <Script type="text/javascript" src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_ID}`} />
           <body className={inter.className}>{children}</body>
         </html>
       </ReactQueryClientProvider>
