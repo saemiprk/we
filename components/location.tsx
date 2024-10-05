@@ -20,7 +20,7 @@ export default function Location(){
                 const position = new (window as any).naver.maps.LatLng(37.517436, 126.8997884);
                 const mapOptions = {
                     center: position,
-                    zoom: 17
+                    zoom: 16
                 };
                 
                 const map = new (window as any).naver.maps.Map(mapRef.current, mapOptions);

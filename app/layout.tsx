@@ -27,7 +27,6 @@ export default function RootLayout({
       <ReactQueryClientProvider>
         
         <html lang="en">
-          <Script type="text/javascript" src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_ID}`} />
           <body className={inter.className}>{children}</body>
         </html>
       </ReactQueryClientProvider>
