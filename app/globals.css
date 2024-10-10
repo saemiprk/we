@@ -19,16 +19,11 @@ body * {
 }
 
 /* swiper */
-.swiper {
-    width: 100%;
+.swiper-button-prev{
+    color: #fff !important;
 }
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-} 
-.swiper-wrapper{
-    align-items: center;
+.swiper-button-next{
+    color: #fff !important;
 }
 
 /* Account */
