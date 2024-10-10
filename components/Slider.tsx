@@ -32,6 +32,7 @@ const Slider: React.FC<SliderProps> = ({ num, className }) => {
       navigation
       className={className}
       loop={true}
+      zoom={true}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className="flex items-center justify-center">
