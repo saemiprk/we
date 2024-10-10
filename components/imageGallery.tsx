@@ -42,20 +42,20 @@ export default function ImageGallery(){
         <div className='py-5'>
             <Title ko='우리의 순간' en='GALLERY' />
             <div className='grid grid-cols-4 gap-2'>
-                <Image src={image01} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={0} priority />
-                <Image src={image02} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={1} priority />
-                <Image src={image03} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={2} priority />
-                <Image src={image04} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={3} priority />
-                <Image src={image05} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={4} priority />
-                <Image src={image06} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={5} priority />
+                <Image src={image01} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={0} priority />
+                <Image src={image02} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={1} priority />
+                <Image src={image03} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={2} priority />
+                <Image src={image04} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))  } data-index={3} priority />
+                <Image src={image05} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={4} priority />
+                <Image src={image06} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={5} priority />
                 <div className='col-span-2'>
-                    <Image className='h-full w-full' src={image07} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={6} priority />
+                    <Image className='h-full w-full' src={image07} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={6} priority />
                 </div>
                 <div className='col-span-2'>
-                    <Image className='h-full w-full' src={image08} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={7} priority />
+                    <Image className='h-full w-full' src={image08} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={7} priority />
                 </div>
-                <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={8} priority />
-                <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={openModalHandler} data-index={9} priority />
+                <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={8} priority />
+                <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={(e) => openModalHandler(Number(e.currentTarget.dataset.index))} data-index={9} priority />
                 {isOpen && (
                     <div className="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-hidden flex items-center justify-center p-4">
                         <button type="button" className='absolute top-5 right-5 text-white text-2xl z-50' onClick={() => setIsOpen(false)}><IoMdClose /></button>
