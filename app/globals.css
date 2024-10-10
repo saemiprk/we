@@ -26,7 +26,7 @@ body * {
 .swiper-button-next:after, .swiper-button-prev:after{
     font-size: 30px !important;
 }
-.swiper-slide img{
+.swiper-slide > div{
     touch-action: pinch-zoom;
 }
 
