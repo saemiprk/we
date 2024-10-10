@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import image01 from '../public/images/1.jpg';
 import image02 from '../public/images/2.jpg';
@@ -11,18 +12,30 @@ import image07 from '../public/images/7.jpg';
 import image08 from '../public/images/8.jpg';
 import image09 from '../public/images/9.jpg';
 import image10 from '../public/images/10.jpg';
-import { useState } from 'react';
+import { IoMdClose } from "react-icons/io";
 import Slider from './Slider';
 import Title from './title';
-import { IoMdClose } from "react-icons/io";
 
 export default function ImageGallery(){
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [first, setFirst] = useState(1);
+    const [first, setFirst] = useState<number>(0);
 
-    const openModalHandler = (e) => {
-        setFirst(Number(e.target.dataset.index));
-        setIsOpen(!isOpen);
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        // 컴포넌트가 언마운트될 때 overflow 스타일을 원래대로 되돌립니다.
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
+    const openModalHandler = (index: number) => {
+        setFirst(index);
+        setIsOpen(true);
     };
 
     return (
@@ -43,14 +56,14 @@ export default function ImageGallery(){
                 </div>
                 <Image src={image09} alt='taehyen, saemi' width={300} height={100} onClick={openModalHandler} data-index={8} priority />
                 <Image src={image10} alt='taehyen, saemi0' width={300} height={100} onClick={openModalHandler} data-index={9} priority />
-                {isOpen ? (
+                {isOpen && (
                     <div className="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-hidden flex items-center justify-center p-4">
-                        <button type="button" className='absolute top-5 right-5 text-white text-2xl z-50' onClick={() => setIsOpen(!isOpen)}><IoMdClose /></button>
+                        <button type="button" className='absolute top-5 right-5 text-white text-2xl z-50' onClick={() => setIsOpen(false)}><IoMdClose /></button>
                         <div className="relative w-full h-full max-w-[90vw] max-h-[90vh] flex items-center justify-center">
                             <Slider num={first} className="w-full h-full" />
                         </div>
                     </div>
-                ) : null}
+                )}
             </div>
         </div>
     )
