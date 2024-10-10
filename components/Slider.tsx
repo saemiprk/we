@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Zoom } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -28,18 +28,22 @@ const Slider: React.FC<SliderProps> = ({ num, className }) => {
 
   return (
     <Swiper
-      modules={[Navigation]}
+      modules={[Navigation, Zoom]}
       navigation
       className={className}
       loop={true}
-      zoom={true}
+      zoom={{
+        maxRatio: 3,
+        minRatio: 1,
+        toggle: true,
+      }}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className="flex items-center justify-center">
-          <div className="relative w-full h-full">
+          <div className="swiper-zoom-container relative w-full h-full">
             <Image
               src={image}
-              alt={`Slide ${index + 1}`}
+              alt={`taehyen, saemi ${index + 1}`}
               layout="fill"
               objectFit="contain"
               className="select-none"
